@@ -70,7 +70,7 @@ html {
   --floral-white: #fffaf0;
   --background-color: #f5f5f5;
   --alt-background-color: black;
-  --text-selection-background-color: #555;
+  --text-selection-background-color: rgb(44, 44, 44);
   --base-color: 0;
   --color-lightest: hsla(var(--base-color), 1%, 85%, 100%);
   --color-light: hsla(var(--base-color), 1%, 75%, 100%);
@@ -292,7 +292,7 @@ p {
 /* This part isn't required */
 
 .projects {
-  background: #111;
+  background: rgb(40, 40, 40);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -318,7 +318,7 @@ p {
   grid-template-columns: 1fr;
   grid-gap: 3rem;
   min-height: 100vh;
-  background: #f5f5f5;
+  background: #00c0a3;
   padding: 1rem 1rem;
 }
 
@@ -583,5 +583,6 @@ p {
   @media (min-width: 1400px) {
     body {
       background: var(--color-lightest);
+      }
     }
   }
