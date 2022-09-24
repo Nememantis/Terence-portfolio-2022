@@ -56,7 +56,7 @@ html {
 
 :root {
   --primary-text-color: #222;
-  --accent-color: #555;
+  --accent-color: rgb(255, 255, 255);
   --hyperlink-color: #333;
   --hyperlink-alternate-color: orangered;
   --hover-color: #00c0a3;
@@ -71,7 +71,7 @@ html {
   --background-color: #96eee1;
   --alt-background-color: #96eee1;
   --text-selection-background-color: #555;
-  --base-color: 0;
+  --base-color: #96eee10;
   --color-lightest: hsla(var(--base-color), 1%, 85%, 100%);
   --color-light: hsla(var(--base-color), 1%, 75%, 100%);
   --color-normal: hsla(var(--base-color), 1%, 50%, 100%);
@@ -241,6 +241,7 @@ p {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
+  background-color: #96eee1;
   /* background: rgb(238, 174, 202);
   background: radial-gradient(circle,
       rgba(238, 174, 202, 1) 0%,
