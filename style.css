@@ -13,9 +13,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url('make-something-fly.css');
-@import url('animated-gradient.css');
-@import url('xtext-stroke.css');
-@import url('stroke-shadow.css');
 @import url('scroll-to-top.css');
 /*
 
@@ -35,7 +32,7 @@ No media query for `xs` since this is the default in Bootstrap
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  cursor: url("up.png"), auto !important;
+  /* cursor: url("up.png"), auto !important; */
 }
 
 *,
@@ -56,27 +53,16 @@ html {
 
 :root {
   --primary-text-color: #222;
-  --accent-color: rgb(255, 255, 255);
+  --accent-color: #bafffb;
   --hyperlink-color: #333;
   --hyperlink-alternate-color: orangered;
   --hover-color: #00c0a3;
   --body-typeface: "Inter", sans-serif;
   --heading-typeface: "Staatliches", cursive;
-  --off-white: #f8f8ff;
-  --isabelline: #f4f0ec;
-  --baby-powder: #fefefa;
-  --alice-blue: #f0f8ff;
-  --alabaster: #f2f0e6;
-  --floral-white: #fffaf0;
-  --background-color: #96eee1;
+  --background-color: #394141;
   --alt-background-color: #96eee1;
   --text-selection-background-color: #555;
   --base-color: #96eee10;
-  --color-lightest: hsla(var(--base-color), 1%, 85%, 100%);
-  --color-light: hsla(var(--base-color), 1%, 75%, 100%);
-  --color-normal: hsla(var(--base-color), 1%, 50%, 100%);
-  --color-dark: hsla(var(--base-color), 1%, 35%, 100%);
-  --color-darkest: hsla(var(--base-color), 1%, 15%, 100%);
 }
 
 
@@ -164,13 +150,16 @@ a:active {
 
 .navigation-arrow:active,
 .navigation-arrow:hover {
-  color: #5200FF;
+  color: var(--accent-color);
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #5200FF;
+  -webkit-text-stroke-color: var(--accent-color);
 }
 
 .colored-link {
   color: var(--hyperlink-alternate-color);
+}
+.custom-navigation {
+  color: white;
 }
 
 .custom-navigation:hover {
@@ -178,6 +167,7 @@ a:active {
   background-size: 15%;
   background-repeat: no-repeat;
   background-position: center center;
+  color: var(--accent-color);
 }
 
 
@@ -185,6 +175,11 @@ p {
   line-height: 1.3;
   margin-bottom: 1rem;
 }
+
+.project-title { font-size: 3.225rem;}
+.project-category {font-size: .8rem; text-transform: uppercase;}
+.project-description {font-size: 1.275rem; line-height: 1.3em;}
+
 
 
 
@@ -201,6 +196,22 @@ p {
 .work-wrapper {
   flex: 1;
 }
+
+.work-navigation-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 3 0vh; 
+}
+
+.work-navigation-buttons { padding: 1rem; width: 70%; display: flex; flex-wrap: wrap;}
+
+
+.work-navigation-button {border: 1px solid white; padding: .5rem 1rem; border-radius: .8rem; display: inline-block; margin-right: .5rem; margin-bottom: .5rem; }
+
+
+
 
 /* Padding around work grid and project page */
 .portfolio,
@@ -220,11 +231,11 @@ p {
 
 
 /* Optional – Sizing the work page images */
- figure {
+figure {
   max-height: 250px;
   overflow: hidden;
   position: relative;
-} 
+}
 
 
 /* Hero 
@@ -241,12 +252,11 @@ p {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  background-color: #96eee1;
-  /* background: rgb(238, 174, 202);
-  background: radial-gradient(circle,
-      rgba(238, 174, 202, 1) 0%,
-      rgba(148, 187, 233, 1) 100%); */
+
 }
+
+
+.top-hero-header {  background-color:var(--accent-color); min-height: 5rem;}
 
 .branding-navigation {
   display: flex;
@@ -257,7 +267,11 @@ p {
 }
 
 .logo {
-  width: 3rem;
+  width: 8rem;
+  background-color:var(--accent-color);
+  border-radius: 50%;
+  padding: 1rem;
+  margin-top: -5rem;  
 }
 
 .hero-headline-wrapper {
@@ -298,6 +312,22 @@ p {
   display: flex;
   flex-direction: column;
 }
+
+
+
+/* Hero Backgrounds */
+
+.wenwu {background: url(project-images/wenwu/terence-zhu--wenwu--hero.png); }
+.dimensional-dragon {background: url(finalillust-piece.png); }
+/* .dimensional-dragon-accent {background: #5d102c;} */
+.shang-ping  {background: url(Thumbnail8.png); }
+
+
+
+
+
+
+
 
 
 /* Global Footer
@@ -361,14 +391,14 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--alt-background-color);
+
 }
 
 /* Sidebar */
 .project-aside {
   width: 100%;
   color: white;
-  background: rgb(255, 179, 72);
+
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -379,6 +409,7 @@ p {
   flex-direction: row;
   flex: 1;
   align-items: flex-end;
+  margin-bottom: 1rem; 
 }
 
 .arrow {
@@ -387,10 +418,10 @@ p {
 
 .project-image {
   font-size: 12rem;
-  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .about-image {
@@ -398,14 +429,10 @@ p {
 }
 
 
- Main Project Image Area 
-  .project-details {
- width: 100%;
-  background-image: linear-gradient(-225deg,
-      #0ff7c4 0%,
-      #04a8aa 50%,
-      #0b4371 100%);
-  padding: 2rem; 
+/* Main Project Image Area */
+.project-details {
+  width: 100%;
+  padding: 2rem;
 }
 
 
@@ -443,24 +470,14 @@ p {
 */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  body {
-    background: var(--color-darkest);
-  }
-}
+@media (min-width: 576px) {}
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  body {
-    background: var(--color-dark);
-  }
-}
+@media (min-width: 768px) {}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  body {
-    background: var(--color-normal);
-  }
+
 
   h1 {
     font-size: 4.275rem;
@@ -477,12 +494,10 @@ p {
 
 
 
-  .logo {
-    width: 8rem;
-  }
+ 
 
   .hero {
-    min-height: 100vh;
+    min-height: 90vh;
   }
 
   .hero-headline-wrapper {
@@ -545,7 +560,7 @@ p {
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
-    flex-direction: row;
+    flex-direction: row-reverse;
 
   }
 
@@ -567,23 +582,15 @@ p {
 
 
   .project-image {
-    min-height: 100vh;
+   
   }
 
 
 
 
   /* X-Large devices (large desktops, 1200px and up)*/
-  @media (min-width: 1200px) {
-    body {
-      background: var(--color-light);
-    }
-  }
+  @media (min-width: 1200px) {}
 
   /* XX-Large devices (larger desktops, 1400px and up) */
-  @media (min-width: 1400px) {
-    body {
-      background: var(--color-lightest);
-    }
-  }
+  @media (min-width: 1400px) {}
 }
