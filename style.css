@@ -52,10 +52,10 @@ html {
 */
 
 :root {
-  --primary-text-color: #222;
+  --primary-text-color: #252525;
   --accent-color: #bafffb;
-  --hyperlink-color: #333;
-  --hyperlink-alternate-color: orangered;
+  --hyperlink-color: #EAE4FF;
+  --hyperlink-alternate-color: #EAE4FF;
   --hover-color: #00c0a3;
   --body-typeface: "Inter", sans-serif;
   --heading-typeface: "Staatliches", cursive;
@@ -349,7 +349,7 @@ figure {
   grid-template-columns: 1fr;
   grid-gap: 3rem;
   min-height: 100vh;
-  background: #ff9626;
+  background: #FF8A00;
   padding: 1rem 1rem;
 }
 
