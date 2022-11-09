@@ -256,7 +256,7 @@ figure {
 }
 
 
-.top-hero-header {  background-color:var(--accent-color); min-height: 5rem;}
+.top-hero-header {  background-color:var(--accent-color); min-height: 3rem;}
 
 .branding-navigation {
   display: flex;
@@ -347,8 +347,8 @@ figure {
 .about {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3rem;
-  min-height: 100vh;
+  grid-gap: 2rem;
+  min-height: 50vh;
   background: #FF8A00;
   padding: 1rem 1rem;
 }
@@ -361,6 +361,7 @@ figure {
 
 .footer-item-2,
 .about-item-2 {
+  text-align:center;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
 }
