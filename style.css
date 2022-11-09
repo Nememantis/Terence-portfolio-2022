@@ -263,6 +263,8 @@ figure {
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
   align-items: center;
 }
 
@@ -282,6 +284,13 @@ figure {
   justify-content: center;
   padding: 2rem 4rem;
   text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 100vh;
+  height: inherit;
+  object-fit: cover; 
 }
 
 .hero-icon {
@@ -323,7 +332,67 @@ figure {
 .shang-ping  {background: url(Thumbnail8.png); }
 
 
+/*  
+Parallax layer scaling formula
 
+1 + (translateZ * -1) / perspective  
+*/
+
+.parallax {
+  perspective: 1.05px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin: 50% 45%;
+  /* magic numbers, sorry! No idea why there's a slight rightward displacement on parallax layers, but there is, so I need to compensate. 45% to adjust for the 90vh of the parallax layers. */
+}
+
+.hero_parallax_group {
+  position: relative;
+  height: 90vh;
+  transform-style: preserve-3d;
+  z-index: -10;
+
+  /*debug view*/
+  /*
+    
+
+        transform: translate3d(100px, 0px, 0px) rotateY(0.1deg);
+    
+*/
+}
+
+.parallax_layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax_layer-base {
+  transform: translateZ(0);
+}
+
+.parallax_layer-front {
+  transform: translateZ(0px) scale(1);
+}
+
+.parallax_layer-close {
+  transform: translateZ(-0.45px) scale(1.45);
+}
+
+.parallax_layer-mid {
+  transform: translateZ(-0.75px) scale(1.75);
+}
+
+.parallax_layer-far {
+  transform: translateZ(-1.5px) scale(2.5);
+}
+
+.parallax_layer-bg {
+  transform: translateZ(-3px) scale(4);
+}
 
 
 
