@@ -252,9 +252,7 @@ figure {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-
 }
-
 
 .top-hero-header {  background-color:var(--accent-color); min-height: 3rem;}
 
@@ -263,8 +261,6 @@ figure {
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
   align-items: center;
 }
 
