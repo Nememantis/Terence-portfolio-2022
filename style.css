@@ -35,6 +35,14 @@ html {
   /* cursor: url("up.png"), auto !important; */
 }
 
+.mobile-hero-image {
+  width: 100%;
+  max-height: 100vh;
+  height: inherit;
+  object-fit: cover; 
+  background: url(images/parallax-brawl-mobile.jpg);
+}
+
 *,
 *:before,
 *:after {
@@ -318,8 +326,6 @@ figure {
   flex-direction: column;
 }
 
-
-
 /* Hero Backgrounds */
 
 .wenwu {background: url(project-images/wenwu/terence-zhu-nememantis-photography-custom-figures-marvel-legend-wenwu-ironman-ten-rings-toy-shang-chi-marvel-tony-stark-1.jpg); }
@@ -334,7 +340,6 @@ figure {
 .gladiator {background: url(project-images/gladiator/terence-zhu-nememantis-illustration-portrait-concept-piece-gladiator-versus-future-space-man-spaceman-fighting-arena-action-thrilled-artwork-dynamic-lighting-1.jpg); }
 .untitled {background: url(project-images/wenwu/terence-zhu-nememantis-photography-custom-figures-marvel-legend-wenwu-ironman-ten-rings-toy-shang-chi-marvel-tony-stark-1.jpg); }
 
-
 /* The Essential CSS parallax */
 
 #parallax {
@@ -346,8 +351,6 @@ figure {
   background-position: center center, center left, center center;
   background-size: 100%, 100%, 110%;
 }
-
-
 
 
 
