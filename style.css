@@ -40,7 +40,7 @@ html {
   max-height: 100vh;
   height: inherit;
   object-fit: cover; 
-  background: url(images/parallax-brawl-mobile.jpg);
+  background: url(images/parallax-brawl-mobile-flat.jpg);
 }
 
 *,
@@ -292,9 +292,9 @@ figure {
 
 .hero-image {
   width: 100%;
-  max-height: 50vh;
+  max-height: 100vh;
   height: inherit;
-  object-fit: scale-down; 
+  object-fit: cover; 
 }
 
 .hero-icon {
@@ -471,19 +471,6 @@ figure {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 
  ██████  ███    ███ ███████ ██████   █████  
@@ -496,7 +483,15 @@ figure {
 */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .mobile-hero-image {
+    width: 100%;
+    max-height: 100vh;
+    height: inherit;
+    object-fit: cover; 
+    background: url(images/parallax-brawl-mobile-flat.jpg);
+  }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {}
