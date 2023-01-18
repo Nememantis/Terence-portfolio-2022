@@ -340,19 +340,18 @@ figure {
 .gladiator {background: url(project-images/gladiator/terence-zhu-nememantis-illustration-portrait-concept-piece-gladiator-versus-future-space-man-spaceman-fighting-arena-action-thrilled-artwork-dynamic-lighting-1.jpg); }
 .untitled {background: url(project-images/wenwu/terence-zhu-nememantis-photography-custom-figures-marvel-legend-wenwu-ironman-ten-rings-toy-shang-chi-marvel-tony-stark-1.jpg); }
 
-/* The Essential CSS parallax */
+/* The Essential CSS parallax for mobile (desktop code is at the bottom under media queries) */
+
 
 #parallax {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background-image: url(https://assets.codepen.io/316293/terence--red-character.png),    url(https://assets.codepen.io/316293/terence--blue-character.png),    url(https://assets.codepen.io/316293/terence--background.png);
+  height: 60vh;
+  background-image: url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center center, center left, center center;
   background-size: 100%, 100%, 110%;
 }
-
-
 
 
 /* Global Footer
@@ -513,10 +512,6 @@ figure {
   }
 
 
-
-
- 
-
   .hero {
     min-height: 90vh;
   }
@@ -601,11 +596,18 @@ figure {
     width: 65%;
   }
 
-
-  .project-image {
-   
+  #parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-15.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-14.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-13.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-12.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-11.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-10.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-09.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-08.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-07.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-06.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-05.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-04.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-03.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-02.png), url(parallax-images/terence-zhu--brawl-layered-parallax-illustration-01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center, center left, center center;
+    background-size: 100%, 100%, 110%;
   }
 
+
+}
 
 
 
@@ -614,4 +616,3 @@ figure {
 
   /* XX-Large devices (larger desktops, 1400px and up) */
   @media (min-width: 1400px) {}
-}
