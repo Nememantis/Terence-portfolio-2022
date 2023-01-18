@@ -35,14 +35,6 @@ html {
   /* cursor: url("up.png"), auto !important; */
 }
 
-.mobile-hero-image {
-  width: 100%;
-  max-height: 100vh;
-  height: inherit;
-  object-fit: cover; 
-  background: url(images/parallax-brawl-mobile-flat.jpg);
-}
-
 *,
 *:before,
 *:after {
@@ -88,7 +80,7 @@ body {
 }
 
 /* Making all images responsive */
-img {
+img,iframe {
   max-width: 100%;
   height: auto;
   vertical-align: top;
