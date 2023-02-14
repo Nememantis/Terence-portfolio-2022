@@ -269,7 +269,7 @@ figure {
   flex-direction: column;
 }
 
-.top-hero-header {  background-color:var(--accent-color); min-height: 3rem;}
+.top-hero-header {  background-color:#ff9626; min-height: 3rem;}
 
 .branding-navigation {
   display: flex;
@@ -281,7 +281,7 @@ figure {
 
 .logo {
   width: 8rem;
-  background-color:var(--accent-color);
+  background-color:#ff9626;
   border-radius: 50%;
   padding: 1rem;
   margin-top: -5rem;  
